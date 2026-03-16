@@ -23,7 +23,7 @@ export default function InteractiveCard({children, contentName} : {children:Reac
     }
     
     return (
-        <div className='w-1/5 h-[300px] shadow-lg rounded-lg bg-white'
+        <div className='w-full h-[300px] shadow-lg rounded-lg bg-white'
         // onClick={()=>onCardSelected()}
         onMouseOver={(e)=>onCardMouseAction(e)}
         onMouseOut={(e)=>onCardMouseAction(e)}

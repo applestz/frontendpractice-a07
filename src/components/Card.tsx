@@ -19,12 +19,14 @@ export default function Card({venueName, imgSrc, onRating} : {venueName:string, 
                     {venueName}
                 </h2>
             </div>
-            <Rating id={`${venueName} Rating`}
-            name={`${venueName} Rating`}
-            data-testid={`${venueName} Rating`}
-            defaultValue={0}
-            onChange={(e, newValue)=>{e.stopPropagation(); onRating(venueName, newValue)}}
-            />
+            <div onClick={(e)=>e.stopPropagation()}>
+                <Rating id={`${venueName} Rating`}
+                name={`${venueName} Rating`}
+                data-testid={`${venueName} Rating`}
+                defaultValue={0}
+                onChange={(e, newValue)=>{e.stopPropagation(); e.preventDefault(); onRating(venueName, newValue)}}
+                />
+            </div>
         </InteractiveCard>
     )
 }
