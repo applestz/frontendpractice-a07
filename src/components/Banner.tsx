@@ -11,7 +11,7 @@ export default function Banner() {
 
 
     return (
-        <div className='block p-[5px] m-[0] w-[100vw] h-[40vh] relative'
+        <div className='block p-[5px] m-[0] w-[100vw] h-[80vh] relative'
          onClick={()=>{setIndex((index+1)%4)}}>
             <Image
             src={covers[index]}
